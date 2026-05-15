@@ -154,4 +154,9 @@ streamlit run app2.py
 # Deployment
 
 This project is deployed using Streamlit Cloud.
+
+---
+
 # Author
+
+Mansi Nakum
