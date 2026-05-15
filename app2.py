@@ -28,7 +28,7 @@ contract = st.selectbox("Contract", ['Month-to-month', 'One year', 'Two year'])
 billing = st.selectbox("Paperless Billing", ['Yes', 'No'])
 payment = st.selectbox("Payment Method", ['Electronic check', 'Mailed check', 'Bank transfer (automatic)', 'Credit card (automatic)'])
 monthlycharges = st.number_input("Monthly Charges", 10, 130, 60)
-totalcharges = st.number_input("Total Charges", 10, 2500, 9000)
+totalcharges = st.number_input("Total Charges", 10, 9000, 2500)
 
 #
 if st.button("Predict"):
@@ -60,7 +60,7 @@ if st.button("Predict"):
 
     input_df = input_df[expected_columns]
 
-    scaled_input = scaler.transfrom(input_df)
+    scaled_input = scaler.transform(input_df)
 
     prediction = model.predict(scaled_input)[0]
 
